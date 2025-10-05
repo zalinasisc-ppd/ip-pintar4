@@ -48,7 +48,7 @@ def compute_ipmp(df: pd.DataFrame) -> pd.DataFrame:
             df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0)
 
     # Calculations
-    df["Beza Peratus (LLepas - LSemasa)"] = df["%LLepas"] - df["%LSemasa"]
+    df["Beza Peratus (LSemasa - Llepas)"] = df["%LSemasa"] - df["%LLepas"]
     total_ambil = df["Bil. Ambil"].sum()
     df["Pemberat"] = np.where(total_ambil > 0, df["Bil. Ambil"] / total_ambil, 0.0)
     df["IPMP"] = df["Beza Peratus (LLepas - LSemasa)"] * df["Pemberat"]
