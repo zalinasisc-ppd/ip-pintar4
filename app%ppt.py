@@ -51,7 +51,7 @@ def compute_ipmp(df: pd.DataFrame) -> pd.DataFrame:
     df["Beza Peratus (LSemasa - Llepas)"] = df["%LSemasa"] - df["%LLepas"]
     total_ambil = df["Bil. Ambil"].sum()
     df["Pemberat"] = np.where(total_ambil > 0, df["Bil. Ambil"] / total_ambil, 0.0)
-    df["IPMP"] = df["Beza Peratus (LLepas - LSemasa)"] * df["Pemberat"]
+    df["IPMP"] = df["Beza Peratus (LSemasa - LLepas)"] * df["Pemberat"]
 
     # Ranking (tinggi ke rendah)
     df["Ranking"] = df["IPMP"].rank(method="min", ascending=False).astype(int)
