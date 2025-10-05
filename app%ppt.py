@@ -60,7 +60,7 @@ def compute_ipmp(df: pd.DataFrame) -> pd.DataFrame:
     cols = [
         "Mata Pelajaran", "Bil. Daftar", "Bil. Ambil",
         "%LSemasa", "%LLepas",
-        "Beza Peratus (LLepas - LSemasa)", "Pemberat", "IPMP", "Ranking"
+        "Beza Peratus (LSemasa - LLepas)", "Pemberat", "IPMP", "Ranking"
     ]
     df = df[[c for c in cols if c in df.columns]].sort_values("Ranking")
     return df
