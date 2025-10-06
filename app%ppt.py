@@ -178,4 +178,4 @@ st.download_button("⬇️ Muat turun Excel", data=output.getvalue(),
                    file_name="IPMP_report.xlsx",
                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
-st.caption("© SiPP — Sistem Indeks Pemberat Mata Pelajaran")
+st.caption("© SiPP — Sistem Indeks Pemberat Pintar")
